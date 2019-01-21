@@ -18,8 +18,8 @@ function deepestChild() {
   var current = [divGN];
   var next = [];
   while (current) {
-    if (current.children) {
-      next.push(current.children[0])
+    if (current.querySelector(':only-child')) {
+      next.push(current.querySelector(':only-child'))
     } else {
       return current
     }
