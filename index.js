@@ -18,12 +18,11 @@ function deepestChild() {
   var current = [divGN];
   var next = [];
   while (current) {
-    if (current[0].children) {
+    if (current.children) {
       next.push((current[0].children)[0])
     } else {
       return current
     }
     current = next.shift()
   }
-  return null
 }
