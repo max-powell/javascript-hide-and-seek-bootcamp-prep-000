@@ -1,14 +1,25 @@
 function getFirstSelector(selector) {
-  return document.querySelector(selector)
+  return document.querySelector(selector);
 }
 
 function nestedTarget() {
-  return document.querySelector('#nested .target')
+  return document.querySelector('#nested .target');
 }
 
 function increaseRankBy(n) {
-  var ranks = document.querySelectorAll('.ranked-list')
+  var ranks = document.querySelectorAll('.ranked-list');
   for (let i = 0; i < ranks.length; i++) {
   ranks[i].innerHTML = parseInt(ranks[i].innerHTML) + n
+  }
+}
+
+function deepestChild() {
+  var divGN = document.querySelector('div#grand-node');
+  current = [divGN];
+  next = []
+  while (current) {
+    if (current[0].children) {
+      next.push((current[0].children)[0])
+    }
   }
 }
