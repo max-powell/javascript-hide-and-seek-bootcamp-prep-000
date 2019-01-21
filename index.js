@@ -21,7 +21,7 @@ function deepestChild() {
     if (current.children) {
       next.push(current.children[0])
     } else {
-      return current[0]
+      return current
     }
     current = next.shift()
   }
