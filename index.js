@@ -20,6 +20,9 @@ function deepestChild() {
   while (current) {
     if (current[0].children) {
       next.push((current[0].children)[0])
+    } else {
+      return current
     }
+    current = next.shift()
   }
 }
